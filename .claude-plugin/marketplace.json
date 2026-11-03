@@ -1,0 +1,17 @@
+{
+  "name": "dotagents",
+  "owner": {
+    "name": "MHCYR",
+    "url": "https://github.com/MHCYR"
+  },
+  "description": "Skills y plugins personales de MHCYR para Claude Code, Codex y otros agentes.",
+  "plugins": [
+    {
+      "name": "quests",
+      "source": "./plugins/quests",
+      "description": "side-quest y main-quest: afinar ideas de código creativo con preguntas antes de codear.",
+      "category": "productivity",
+      "keywords": ["creative-coding", "planning", "grilling"]
+    }
+  ]
+}
