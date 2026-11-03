@@ -11,4 +11,4 @@ Repo personal de skills y plugins para agentes. Es un marketplace: `.claude-plug
 - Un plugin nuevo se añade también a `marketplace.json` y a la tabla del `README.md`.
 - Cualquier cambio en un plugin sube su `version` (semver).
 - Antes de hacer commit: `claude plugin validate . --strict` y `claude plugin validate ./plugins/<plugin> --strict`.
-- Las skills se escriben en español.
+- Skill text (SKILL.md, reference files, openai.yaml) is written in English. Descriptions stay one short sentence, grill-style.

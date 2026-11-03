@@ -9,9 +9,9 @@
     {
       "name": "quests",
       "source": "./plugins/quests",
-      "description": "side-quest y main-quest: afinar ideas de código creativo con preguntas antes de codear.",
+      "description": "side-quest and main-quest: relentless interviews to sharpen any idea before acting on it.",
       "category": "productivity",
-      "keywords": ["creative-coding", "planning", "grilling"]
+      "keywords": ["planning", "grilling", "interview"]
     }
   ]
 }

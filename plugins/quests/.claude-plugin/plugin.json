@@ -1,13 +1,18 @@
 {
   "name": "quests",
-  "version": "0.1.0",
-  "description": "Interrogatorios para afinar ideas de código creativo: side-quest para ideas que se construyen en la sesión, main-quest para proyectos que se dividen en misiones.",
+  "version": "0.3.0",
+  "description": "Relentless interviews to sharpen any idea: side-quest for ideas done in one session, main-quest for ideas split into missions and logged.",
   "author": {
     "name": "MHCYR",
     "url": "https://github.com/MHCYR"
   },
   "repository": "https://github.com/MHCYR/dotagents",
   "license": "MIT",
-  "keywords": ["creative-coding", "planning", "grilling", "skills"],
-  "skills": ["./skills/side-quest", "./skills/main-quest"]
+  "keywords": ["planning", "grilling", "interview", "ideas", "skills"],
+  "skills": [
+    "./skills/interview",
+    "./skills/quest-log",
+    "./skills/side-quest",
+    "./skills/main-quest"
+  ]
 }

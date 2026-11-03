@@ -6,12 +6,21 @@ Mis skills y plugins personales para agentes de código (Claude Code, Codex y cu
 
 | Plugin | Skills | Para qué |
 | --- | --- | --- |
-| [`quests`](./plugins/quests) | `side-quest`, `main-quest` | Afinar ideas de código creativo con preguntas antes de codear |
+| [`quests`](./plugins/quests) | `side-quest`, `main-quest`, `interview`, `quest-log` | Afinar cualquier idea (código, negocio, marketing…) con preguntas antes de actuar |
 
 ### quests
 
-- **side-quest**: interroga una idea creativa corta (efecto, shader, animación, ASCII, interacción) hasta que sea construible en la misma sesión. Revisa prerrequisitos, deja una ficha con "listo cuando" y construye solo cuando confirmas.
-- **main-quest**: para proyectos creativos que no caben en una sesión. Fija visión, resultado esperado y no-objetivos, verifica prerrequisitos, divide el trabajo en misiones y lo documenta en `docs/quests/<slug>/QUEST.md`, `GLOSSARY.md` y `docs/adr/`. Al final ofrece crear un issue épico y uno por misión en GitHub.
+Mismo patrón que grill-me / grill-with-docs: dos atajos que tú invocas y que solo cargan piezas reutilizables.
+
+```
+/quests:side-quest ──► interview
+/quests:main-quest ──► interview + quest-log
+```
+
+- **side-quest**: una idea que se resuelve en la misma sesión. Al terminar la entrevista deja una ficha con "done when" y plan, y actúa solo cuando confirmas.
+- **main-quest**: una idea que no cabe en una sesión. No hace el trabajo: deja el registro de la quest.
+- **interview** (pieza): el método de preguntar. Rondas sobre un árbol de decisiones, opción recomendada primero, los hechos los averigua el agente y las decisiones son tuyas, checklist de prerrequisitos.
+- **quest-log** (pieza): el registro en `docs/quests/<slug>/QUEST.md` (visión, resultado esperado, no-objetivos, decisiones, prerrequisitos, riesgos, misiones), ADRs en `docs/adr/` para decisiones difíciles de revertir, e issues de GitHub opcionales (un épico y uno por misión).
 
 Inspiradas en [`grill-me`](https://github.com/mattpocock/skills/tree/main/skills/productivity/grill-me) y [`grill-with-docs`](https://github.com/mattpocock/skills/tree/main/skills/engineering/grill-with-docs) de Matt Pocock.
 
@@ -24,7 +33,7 @@ claude plugin marketplace add MHCYR/dotagents
 claude plugin install quests@dotagents
 ```
 
-Se invocan con `/quests:side-quest` y `/quests:main-quest`, o diciendo "side quest" / "main quest".
+`/quests:side-quest` y `/quests:main-quest` se invocan solo a mano (`disable-model-invocation: true`). `interview` y `quest-log` también las puede activar el agente por su cuenta.
 
 ### Codex
 

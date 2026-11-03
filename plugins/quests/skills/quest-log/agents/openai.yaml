@@ -1,0 +1,3 @@
+interface:
+  display_name: "Quest log"
+  short_description: "Record a quest's brief, decisions, ADRs and missions"
